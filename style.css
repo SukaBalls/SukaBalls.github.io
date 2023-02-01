@@ -8,9 +8,9 @@
 	scroll-behavior: smooth;
 }
 :root{
-	--bg-color: #2a2a2a;
-	--second-bg-color: #202020;
-	--text-color: #fff;
+	--bg-color: #fff;
+	--second-bg-color: #20262E;
+	--text-color: #20262E;
 	--second-color: #ccc;
 	--main-color: #5FFF9F;
 	--big-font: 5rem;
@@ -22,6 +22,7 @@ body{
 	color: var(--text-color);
 }
 header{
+	/* float: right; */
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -37,7 +38,7 @@ header{
 }
 
 .logo{
-	color: var(--text-color);
+	color: #2D2D2D;
 	font-size: 35px;
 	font-weight: 700;
 	letter-spacing: 1px;
@@ -47,9 +48,10 @@ span{
 }
 .navlist{
 	display: flex;
+	float: right;
 }
 .navlist a{
-	color: var(--second-color);
+	color: #000000;
 	font-size: 17px;
 	font-weight: 500;
 	margin: 0 25px;
@@ -61,23 +63,17 @@ span{
 .navlist a.active{
 	color: var(--main-color);
 }
-#menu-icon{
-	font-size: 35px;
-	color: var(--text-color);
-	z-index: 10001;
-	cursor: pointer;
-	margin-left: 25px;
-	display: none;
-}
 
 section{
 	padding: 160px 15% 120px;
 }
 .home{
+	left: 50px;
+	top: 80px;
 	position: relative;
-	height: 100vh;
-	width: 100%;
-	background-image: url(img/Desktop\ -\ 1.png);
+	height: 90vh;
+	width: 90%;
+	background-image: url(img/Cover.png);
 	background-size: cover;
 	background-position: center;
 	display: flex;
@@ -101,7 +97,7 @@ section{
 }
 .two{
 	display: inline-block;
-	color: var(--second-color);
+	color: var(--text-color);
 	font-size: 20px;
 	font-weight: 500;
 }
@@ -115,13 +111,13 @@ section{
 .home-text h3{
 	color: var(--text-color);
 	margin: 0 0 35px;
-	font-size: 3rem;
+	font-size: 2rem;
 	font-weight: 700;
 	line-height: 1.1;
 }
 .home-text p{
 	color: var(--second-color);
-	font-size: var(--p-font);
+	font-size: 15px;
 	line-height: 1.8;
 	margin-bottom: 40px;
 }
@@ -130,6 +126,19 @@ section{
 	align-items: center;
 	justify-content: center;
 }
+
+.btn-port{
+	display: inline-block;
+	padding: 12px 28px;
+	background: #B3FFAE;
+	border-radius: 500px;
+	color: var(--text-color);
+	font-size: 1rem;
+	letter-spacing: 1px;
+	font-weight: 400;
+	transition: all .45s ease;
+}
+
 .btn{
 	display: inline-block;
 	padding: 12px 28px;
@@ -144,31 +153,7 @@ section{
 .btn:hover{
 	transform: scale(0.9);
 }
-.btn2{
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 15px;
-	font-weight: 600;
-	color: var(--text-color);
-	margin-left: 35px;
-}
-.btn2 span i{
-	height: 55px;
-	width: 55px;
-	background: var(--main-color);
-	color: var(--text-color);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 35px;
-	border-radius: 50%;
-	margin-right: 15px;
-	transition: all .45s ease;
-}
-.btn2 span i:hover{
-	transform: scale(1.1) translateY(5px);
-}
+
 
 header.sticky{
 	background: var(--bg-color);
@@ -203,24 +188,30 @@ header.sticky{
 	margin: 15px 0 30px;
 }
 .about-text p{
-	color: var(--second-color);
+	color: var(--second-bg-color);
 	font-size: var(--p-font);
 	line-height: 1.8;
 	margin-bottom: 2rem;
 }
 
-.services{
-	background: var(--bg-color);
+.exp-about{
+	padding-left: 7em;
+	height: 20em;
+	width: auto;
+	justify-content: center;
+	margin-bottom: 3rem;
 }
+
 .main-text{
 	text-align: center;
 }
 .main-text p{
-	color: var(--second-color);
+	color: #ccc;
 	font-size: 15px;
 	margin-bottom: 15px;
 }
 .main-text h2{
+	color:#2D2D2D;
 	font-size: var(--h2-font);
 	line-height: 1;
 }
@@ -274,7 +265,8 @@ header.sticky{
 	cursor: pointer;
 }
 .row img{
-	width: 100%;
+	height: auto;
+	max-width: 100%;
 	border-radius: 8px;
 	display: block;
 	transition: transform 0.5s;
@@ -326,7 +318,7 @@ header.sticky{
 }
 
 .contact{
-	background: var(--second-bg-color);
+	background: #fff;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;
@@ -343,7 +335,7 @@ header.sticky{
 	line-height: 1;
 }
 .contact-text p{
-	color: var(--second-color);
+	color: var(--text-color);
 	font-size: var(--p-font);
 	line-height: 1.8;
 	margin-bottom: 30px;
@@ -354,9 +346,10 @@ header.sticky{
 .list li{
 	margin-bottom: 12px;
 }
+/* List Iformation */
 .list li a{
 	display: block;
-	color: var(--second-color);
+	color: #20262E;
 	font-size: 14px;
 	transition: all .45s ease;
 }
@@ -389,13 +382,14 @@ header.sticky{
 form textarea{
 	width: 100%;
 	padding: 14px;
-	background: var(--bg-color);
+	background: var(--main-color);
 	color: var(--text-color);
 	border: none;
 	outline: none;
 	font-size: 15px;
 	border-radius: 8px;
 	margin-bottom: 10px;
+	opacity: 85%;
 }
 .contact-form textarea{
 	resize: none;
@@ -405,7 +399,7 @@ form textarea{
 	display: inline-block;
 	font-size: 16px;
 	background: var(--main-color);
-	color: var(--text-color);
+	color: #20262E;
 	width: 160px;
 	transition: all .45s ease;
 }
@@ -421,7 +415,7 @@ form textarea{
 	align-items: center;
 	justify-content: space-between;
 	gap: 2rem;
-	background: #383838;
+	background: #fff;
 }
 .last-text p{
 	color: var(--second-color);
